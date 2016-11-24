@@ -1,0 +1,17 @@
+<ion-view view-title="Ranks 1.5.0" >
+  <ion-content>
+  	<ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  	</ion-refresher>
+    <ion-list>
+      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.username}}" class="item-thumbnail-left">
+        <img ng-src="http://graph.facebook.com/{{playlist.facebook_id}}/picture?type=large">
+        <h2>{{playlist.first_name}} {{playlist.last_name}}</h2>
+        <h1>{{playlist.highest_score}}</h1>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+
+
